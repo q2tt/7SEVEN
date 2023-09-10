@@ -1,11 +1,16 @@
 @import "base/fonts/fonts";
-
 @import "base/reset";
 
 @import "abstracts/mixins";
 @import "abstracts/variables";
 
+@import "components/buttons";
+@import "components/inputs";
+@import "components/txt";
+
+@import "layout/nav";
+
 
 body{
-    font-family: 'Century Gothic';
+    font-family: 'CenturyGothic', sans-serif;
 }
