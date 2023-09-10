@@ -1,0 +1,11 @@
+@import "base/fonts/fonts";
+
+@import "base/reset";
+
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+
+body{
+    font-family: 'Century Gothic';
+}
