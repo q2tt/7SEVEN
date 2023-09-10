@@ -1,87 +1,253 @@
-.nav{
+.nav {
+  width: 100%;
+  position: fixed;
+  background-color: $nav-bg;
+  z-index: 20;
+
+
+  &__container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 10px 0px;
+    @include flex-row-btw;
+    align-items: center;
+
+    @include _xxl {
+      padding: 10px 100px 10px 40px;
+    }
+
+    @include _s {
+      padding: 10px 70px 10px 15px;
+    }
+  }
+
+  &__logo {
+    width: 138px;
+    height: 70px;
+    margin: 0 40px 0 0;
+
+    @include _s {
+      width: 90px;
+      height: 44px;
+    }
+  }
+
+  &__logo svg {
     width: 100%;
-    position: fixed;
-    background-color: $nav-bg;
-    z-index: 20;
-    
+    height: 100%;
+  }
 
-    &__container{
-        max-width: 1300px;
-        margin: 0 auto;
-        padding: 10px 0px;
-        @include flex-row-btw;
-        align-items: center;
+  &__ul {
+    @include flex-row;
+    flex-wrap: wrap;
+
+    @include _l {
+      @include flex-column;
+      margin: 70px 0 0 0;
+    }
+  }
+
+  &__li {
+    margin: 0 59px 0 0;
+    box-sizing: border-box;
+    padding: 8px 0;
+
+    @include _xxl {
+      margin: 0 39px 0 0;
     }
 
-    &__ul{
-        @include flex-row;
+    @include _l {
+      margin: 10px;
+      width: max-content;
+      border-bottom: 1px solid $gray;
+      text-transform: uppercase;
     }
-
-    &__li{
-        margin: 0 59px 0 0;
-        box-sizing: border-box;
+    @include _l {
+      margin: 10px;
+      width: max-content;
+      border-bottom: 1px solid $gray;
+      text-transform: uppercase;
     }
+  }
 
-    &__link{
-        color: $white;
-        text-decoration: none;
-    }
-
-    &__language{
-        position: relative;
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        background-color: $bg-lang-black;
-
-        color: $white;
-        font-size: 15px;
-        font-style: normal;
-        font-weight: 700;
-        text-transform: uppercase;
-    }
-   
-}
-.language{
-    &__item{
-        line-height: 60px;
-        padding: 0 0 0 20px;
-        line-height: 60px;
-        text-align: start;
-        box-sizing: border-box;
-    }
-    &__item_no-act{
-        position: absolute;
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        background-color: $bg-lang-gray;
-        left: 60px;
-        top: 0;
-        opacity: 0;
-    }
-}
-
-
-
-.nav__language:hover{
-    cursor: pointer;
-}
-.nav__language:hover .language__item_active{
-    background-color: $bg-lang-black;
-    width: 120px;
-    border-radius: 41px 41px 41px 41px;
-    transition: all .1s;
-}
-.nav__language:hover   .language__item_no-act {
-    opacity: 1;
-    transition: all .1s;
-}
-.language__item_no-act:hover{
-    background-color: $bg-lang-black;
-}
-.nav__link:hover{
+  &__link {
     color: $white;
-    color: $deep-black;
-    text-decoration: underline;
+    text-decoration: none;
+
+    @include _l {
+      color: $deep-black;
+      text-align: center;
+    }
+  }
+
+  &__links {
+    @include _l {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 15px;
+      background: $light-gray;
+      transform: translateX(100%);
+      transition: transform 0.6s;
+    }
+  }
+
+  &__links.active {
+    transform: translateX(0);
+    z-index: 2;
+  }
+
+  &__language-wrap {
+    @include _xxl {
+      width: 120px;
+    }
+    @include _s {
+      width: 80px;
+    }
+  }
+
+  &__language {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: $bg-lang-black;
+
+    color: $white;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    @include _s {
+      height: 40px;
+      font-weight: 500;
+      font-size: 13px;
+      width: 80px;
+      border-radius: 24px 24px 24px 24px;
+    }
+  }
+
+  &__menu-btn {
+    display: none;
+    @include _l {
+      display: block;
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      right: 30px;
+      top: 30px;
+      z-index: 2;
+      overflow: hidden;
+    }
+
+    @include _s {
+      right: 20px;
+      top: 15px;
+    }
+  }
+
+  &__bar {
+    @include _l {
+      width: 30px;
+      height: 2px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      border-radius: 3px;
+      transform: translate(-50%, -50%);
+      background-color: $deep-black;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+  &__menu-btn .nav__bar:nth-of-type(2) {
+    top: calc(50% - 9px);
+  }
+  &__menu-btn .nav__bar:nth-of-type(3) {
+    top: calc(50% + 9px);
+  }
+  &__menu-btn.active .nav__bar:nth-of-type(1) {
+    display: none;
+  }
+  &__menu-btn.active .nav__bar:nth-of-type(2) {
+    top: 50%;
+    transform: translate(-50%, 0%) rotate(45deg);
+  }
+  &__menu-btn.active .nav__bar:nth-of-type(3) {
+    top: 50%;
+    transform: translate(-50%, 0%) rotate(-45deg);
+  }
+}
+
+.language {
+  &__item {
+    line-height: 60px;
+    padding: 0 0 0 20px;
+    line-height: 60px;
+    text-align: start;
+    box-sizing: border-box;
+
+    @include _s {
+      line-height: 40px;
+      padding: 0 0 0 10px;
+    }
+  }
+  &__item_no-act {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: $bg-lang-gray;
+    left: 60px;
+    top: 0;
+    opacity: 0;
+
+    @include _l {
+      opacity: 1;
+    }
+    @include _s {
+      width: 40px;
+      height: 40px;
+      left: 40px;
+    }
+  }
+  &__item_active {
+    @include _l {
+      background-color: $bg-lang-black;
+      width: 120px;
+      border-radius: 41px 41px 41px 41px;
+      transition: all 0.1s;
+    }
+
+    @include _s {
+      width: 80px;
+    }
+  }
+}
+
+.nav__language:hover {
+  cursor: pointer;
+}
+.nav__language:hover .language__item_active {
+  background-color: $bg-lang-black;
+  width: 120px;
+  border-radius: 41px 41px 41px 41px;
+  transition: all 0.1s;
+  @include _s {
+    width: 40px;
+  }
+}
+.nav__language:hover .language__item_no-act {
+  opacity: 1;
+  transition: all 0.1s;
+}
+.language__item_no-act:hover {
+  background-color: $bg-lang-black;
+}
+.nav__link:hover {
+  color: $white;
+  color: $deep-black;
+  text-decoration: underline;
 }
