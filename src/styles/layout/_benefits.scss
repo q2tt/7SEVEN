@@ -1,0 +1,62 @@
+.benefits{
+    background-color: $light-gray;
+    padding: 120px 0;
+
+    &__desc-box{
+        max-width: 555px;
+        margin: 0 0 60px 0;
+    }
+    &__title{
+        color: $deep-black;
+        margin: 0 0 30px 0;
+        
+    }
+    &__txt{
+        line-height: 26px
+    }
+    &__boxes-wrap{
+        @include flex-row-btw;
+    }
+    &__boxes{
+        @include flex-row-btw;
+        flex-wrap: wrap;
+    }
+    &__img-box{
+        width: 460px;
+    }
+    &__figure{
+        width: 400px;
+        margin: 0 0 0 60px;
+    }
+    &__figure img{
+        width: 269px;
+        height: 396px;
+        margin-bottom: 13px;
+    }
+    &__figure figcaption{
+        width: 269px;
+        text-align: center;
+        font-family: 'CenturyGothic', sans-serif;
+        font-size: 16px;
+        font-style: italic;
+        font-weight: 200;
+        line-height: 24px;
+    }
+    &__img-wrap{
+        position: relative;
+    }
+    &__img-wrap::before{
+        content: "";
+            display: block;
+            position: absolute;
+            width: 120px;
+            height: 420px;
+            top: 0;
+            left: 0;
+            background-color: antiquewhite;
+            background: url(../img/pen.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 300px 300px;
+    }
+}

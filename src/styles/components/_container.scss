@@ -1,0 +1,23 @@
+.container {
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
+
+  @include _xxl {
+    max-width: 1100px;
+  }
+  @include _xl {
+    max-width: 900px;
+  }
+  @include _l {
+    max-width: 700px;
+  }
+  @include _m {
+    max-width: 100%;
+    width: 100%;
+    padding: 0 20px;
+  }
+  @include _s {
+    padding: 0 15px;
+  }
+}
