@@ -1,63 +1,94 @@
-.btn-tel{
-    display: block;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background-color: $deep-black;
-    padding: 15px 15px 15px 18px;
-    box-sizing: border-box;
-    margin: 0 8px 0 0;
-    cursor: pointer;
-  box-shadow: 0 0 0 0 rgba(#f9f9fa, .5);
+.btn-tel {
+  display: block;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: $deep-black;
+  padding: 15px 15px 15px 18px;
+  box-sizing: border-box;
+  margin: 0 8px 0 0;
+  cursor: pointer;
+  box-shadow: 0 0 0 0 rgba(#f9f9fa, 0.5);
+  animation: pulse 4.5s infinite;
 
-    &__desc{
-       position: relative;
-   
-    }
+  @include _s {
+    width: 40px;
+    height: 40px;
+    padding: 8px 10px 10px 12px;
+  }
 
-    &__desc-txt{
-         padding: 0 0 0 20px;
-        text-align: center;
-        line-height: 43px;
-        position: absolute;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 700;
-        color: $white;
-    }
-    & svg{
-        width: 24px;
-        height: 30px;
-    }
-}
+  &__desc {
+    position: relative;
+    width: 167px;
+    height: 43px;
 
-.btn-tel:hover svg{
-    transition: all .2s;
-    width: 26px;
-    height: 32px;
-    filter: invert(62%) sepia(65%) saturate(3453%) hue-rotate(81deg) brightness(111%) contrast(132%);
-}
-    .btn-tel:hover{
-    padding: 14px 14px 14px 17px;
-    transition: all .2s;
-    animation: pulse 1.5s;
-}
-.btn-tel:hover  ~ .btn-tel__desc .btn-tel__desc-txt{
-   color: $gray-txt;
-   color: $green;
-   transition: all .2s;
-
-} 
-@keyframes pulse {
-    0% {
-      transform: scale(.85);
-    }
-    70% {
-      transform: scale(1);
-      box-shadow: 0 0 0 50px rgba(#5a99d4, 0);
-    }
-      100% {
-      transform: scale(1);
-      box-shadow: 0 0 0 0 rgba(#5a99d4, 0);
+    @include _s {
+      width: 138px;
+      height: 36px;
     }
   }
+  &__desc svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__desc-txt {
+    padding: 0 0 0 20px;
+    text-align: center;
+    line-height: 43px;
+    position: absolute;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    color: $white;
+
+    @include _s {
+      padding: 0 0 0 16px;
+      font-size: 12px;
+      line-height: 36px;
+    }
+  }
+  & svg {
+    width: 24px;
+    height: 30px;
+
+    @include _s {
+      width: 18px;
+      height: 24px;
+    }
+  }
+}
+
+.btn-tel:hover svg {
+  transition: all 0.2s;
+  width: 26px;
+  height: 32px;
+  filter: invert(62%) sepia(65%) saturate(3453%) hue-rotate(81deg)
+    brightness(111%) contrast(132%);
+}
+.btn-tel:hover {
+  padding: 14px 14px 14px 17px;
+  transition: all 0.2s;
+}
+.btn-tel:hover ~ .btn-tel__desc .btn-tel__desc-txt {
+  color: $gray-txt;
+  color: $green;
+  transition: all 0.2s;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(0.85);
+  }
+  14% {
+    transform: scale(1);
+    box-shadow: 0 0 0 50px rgba(#5a99d4, 0);
+  }
+  19% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(#5a99d4, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(#5a99d4, 0);
+  }
+}

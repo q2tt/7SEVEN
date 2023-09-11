@@ -1,56 +1,95 @@
-.banner{
+.banner {
+  width: 100%;
+  height: auto;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: auto;
-    position: relative;
+    min-height: 100%;
+    background-color: $img-bg;
+    z-index: 1;
+  }
 
-    &::before{
-        content: '';
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: auto;
-        min-height: 100%;
-        background-color: $img-bg;
-        z-index: 1;
-    }
+  &__img-box {
+    width: 100%;
+    height: auto;
+  }
 
-    &__img-box{
-        width: 100%;
-        height: auto;
-    }
+  &__img {
+    width: 100%;
+    height: auto;
+    min-height: 500px;
+    object-fit: cover;
+  }
 
-    &__img{
-        width: 100%;
-        height: auto;
-    }
-
-    &__content{
-        max-width: 870px;
-        position: absolute;
-        top: 330px;
-        left: 389px;
-        z-index: 2;
-        height: calc(100% - 330px);
-        
-    }
-   
-
-    &__title{
-        color: $white;
-    }
-
-    &__txt{
-        line-height: 30px;
-        color: $white;
-        max-width: 591px;
-        margin: 26px 0 0 0;
-    }
-    &__contact-box{
+  &__content {
+    max-width: 870px;
     position: absolute;
-    bottom: 60px;    
+    top: 330px;
+    left: 389px;
+    z-index: 2;
+    height: calc(100% - 330px);
+
+    @include _xxxl {
+      top: 190px;
+      left: 240px;
+      height: calc(100% - 190px);
+    }
+
+    @include _xxl {
+      top: 170px;
+      left: 100px;
+      height: calc(100% - 170px);
+    }
+
+    @include _l {
+      top: 150px;
+      left: 40px;
+      height: calc(100% - 150px);
+      padding: 0 40px 0 0;
+      box-sizing: border-box;
+    }
+    @include _s {
+      left: 20px;
+      top: 120px;
+      height: calc(100% - 120px);
+    }
+  }
+
+  &__title {
+    color: $white;
+  }
+
+  &__txt {
+    line-height: 30px;
+    color: $white;
+    max-width: 591px;
+    margin: 26px 0 0 0;
+
+    @include _xl {
+      margin: 16px 0 0 0;
+    }
+    @include _s {
+      line-height: 22px;
+    }
+  }
+  &__contact-box {
+    position: absolute;
+    bottom: 60px;
     @include flex-row;
     align-items: center;
+
+    @include _xl {
+      bottom: 34px;
     }
+    @include _l {
+      bottom: 24px;
+    }
+  }
 }
