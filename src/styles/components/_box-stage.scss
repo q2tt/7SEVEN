@@ -1,0 +1,44 @@
+.box-stage{
+    width: calc(50% - 15px);
+    min-height: 360px;
+    border-radius: 4px;
+    background: #F9F9FA;
+    padding: 40px 30px 30px 30px;
+    box-sizing: border-box;
+    margin: 0 0 30px 0;
+
+    &__images-wrap{
+        @include flex-row-btw;
+    }
+    &__icon-wrap{
+        width: 80px;
+        height: 80px;       
+    }
+
+    &__icon{
+        width: auto;
+        height: auto;       
+    }
+    &__num{
+        display: block;
+        color: $gray-num;
+        font-size: 100px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 80px; /* 80% */
+        letter-spacing: -1px;
+    }
+
+    &__title{
+        max-width: 224px;
+        margin: 35px 0 27px 0;
+    }
+
+    &__txt{
+        line-height: 24px;
+    }
+
+    &__link{
+        color: $deep-black;
+    }
+}

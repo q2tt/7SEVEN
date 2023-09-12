@@ -93,30 +93,63 @@
   }
 }
 
-.btn-scroll{
-    cursor: pointer;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    border: none;
-    background-color: $nav-bg;
-    margin: 0 20px 0 0;
-    border: 0.6px solid $white;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+.btn-scroll {
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  background-color: $nav-bg;
+  margin: 0 20px 0 0;
+  border: 0.6px solid $white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
-    @include _m{
-        width: 40px;
-        height: 40px;
-        margin: 0 14px 0 0;
-    }
+  @include _m {
+    width: 40px;
+    height: 40px;
+    margin: 0 14px 0 0;
+  }
 }
-.btn-scroll-no-active{
-    background-color: $nav-bg; 
-    margin: 0 20px 0 0;
-    border: 0.6px solid $white;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; 
-    cursor: not-allowed; 
-    opacity: 0.5; 
-    pointer-events: none; 
+.btn-scroll-no-active {
+  background-color: $nav-bg;
+  margin: 0 20px 0 0;
+  border: 0.6px solid $white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  cursor: not-allowed;
+  opacity: 0.5;
+  pointer-events: none;
+}
 
+.button {
+  border-radius: 2px;
+  background: $deep-black;
+  width: 263px;
+  height: 60px;
+  color: $white;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  border: none;
+  display: block;
+  position: relative;
+}
+
+.button:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: $gray-txt;
+  -webkit-transition: none;
+  -moz-transition: none;
+  transition: none;
+}
+.button:hover:after {
+  width: 100%;
+  background-color: rgba(124, 123, 123, 0);
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }

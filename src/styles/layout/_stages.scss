@@ -1,0 +1,33 @@
+.stages{
+    padding: 120px 0;
+
+    &__wrap{
+        display: grid;
+        grid-template-columns: 280px 1fr;
+        grid-template-rows: 220px 1fr;
+        grid-template-areas: 'description boxes' 'button boxes';
+     
+    }
+    &__desc-wrap{
+        grid-area: description;
+    }
+    &__boxes{
+        grid-area: boxes;
+        margin: 0 0 0 120px;
+        @include flex-row-btw;
+        flex-wrap: wrap;
+    }
+    &__btn-wrap{
+        grid-area: button;
+    }
+   
+    &__title {
+        margin: 0 0 30px;
+    }
+    &__p{
+        line-height: 26px;
+    }
+
+
+
+}

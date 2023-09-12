@@ -9,12 +9,15 @@
 @import "components/inputs";
 @import "components/txt";
 @import "components/box-desc-icon";
+@import "components/box-stage";
 
 @import "layout/nav";
 @import "layout/banner";
 @import "layout/benefits";
+@import "layout/stages";
 
 
 body{
     font-family: 'CenturyGothic', sans-serif;
+    color: $deep-black;
 }
