@@ -9,6 +9,7 @@
   @mixin flex-al-centr {
     display: flex;
     align-items: center;
+    justify-content: center;
   }
   @mixin flex-row {
     display: flex;

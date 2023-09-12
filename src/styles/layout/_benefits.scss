@@ -1,62 +1,141 @@
-.benefits{
-    background-color: $light-gray;
-    padding: 120px 0;
+.benefits {
+  background-color: $light-gray;
+  padding: 120px 0;
 
-    &__desc-box{
-        max-width: 555px;
-        margin: 0 0 60px 0;
+  @include _l {
+    padding: 80px 0;
+  }
+
+  @include _m {
+    padding: 40px 0;
+  }
+
+  &__desc-box {
+    max-width: 555px;
+    margin: 0 0 29px 0;
+
+    @include _l {
+      max-width: 495px;
     }
-    &__title{
-        color: $deep-black;
-        margin: 0 0 30px 0;
-        
+  }
+  &__title {
+    color: $deep-black;
+    margin: 0 0 30px 0;
+  }
+  &__txt {
+    line-height: 26px;
+    color: $txt;
+    font-weight: 100;
+    letter-spacing: 1px;
+    max-width: 400px;
+  }
+  &__boxes-wrap {
+    @include flex-row-btw;
+
+    @include _xl {
+      @include flex-column;
     }
-    &__txt{
-        line-height: 26px
+  }
+  &__boxes {
+    @include flex-row-btw;
+    flex-wrap: wrap;
+
+    @include _xl {
+      position: relative;
+      flex-wrap: nowrap;
+      width: auto;
+      overflow: hidden;
+      -webkit-overflow-scrolling: touch;
     }
-    &__boxes-wrap{
-        @include flex-row-btw;
+  }
+  &__img-box {
+    @include _xl {
+      @include flex-al-centr;
     }
-    &__boxes{
-        @include flex-row-btw;
-        flex-wrap: wrap;
+  }
+  &__figure {
+    width: 300px;
+    margin: 0 0 0 60px;
+
+    @include _xl {
+      margin: 0 0 0 40px;
+      width: 240px;
     }
-    &__img-box{
-        width: 460px;
+  }
+  &__figure img {
+    width: 269px;
+    height: 396px;
+    margin-bottom: 13px;
+
+    @include _xl {
+      width: 220px;
+      height: 290px;
     }
-    &__figure{
-        width: 400px;
-        margin: 0 0 0 60px;
+
+    @include _m {
+      width: 170px;
+      height: 260px;
     }
-    &__figure img{
-        width: 269px;
-        height: 396px;
-        margin-bottom: 13px;
+  }
+  &__figure figcaption {
+    width: 269px;
+    text-align: center;
+    font-family: "CenturyGothic", sans-serif;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 200;
+    line-height: 24px;
+
+    @include _xl {
+      width: 220px;
     }
-    &__figure figcaption{
-        width: 269px;
-        text-align: center;
-        font-family: 'CenturyGothic', sans-serif;
-        font-size: 16px;
-        font-style: italic;
-        font-weight: 200;
-        line-height: 24px;
+    @include _m {
+      width: 170px;
+      font-size: 14px;
+      line-height: 16px;
     }
-    &__img-wrap{
-        position: relative;
+  }
+  &__img-wrap {
+    position: relative;
+    margin: 0 0 0 60px;
+
+    @include _xl {
+      margin: 0 0 0 30px;
     }
-    &__img-wrap::before{
-        content: "";
-            display: block;
-            position: absolute;
-            width: 120px;
-            height: 420px;
-            top: 0;
-            left: 0;
-            background-color: antiquewhite;
-            background: url(../img/pen.png);
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: 300px 300px;
+  }
+  &__img-wrap::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 120px;
+    height: 420px;
+    top: 0;
+    left: 0;
+    background-color: antiquewhite;
+    background: url(../img/pen.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 300px 300px;
+
+    @include _xl {
+      width: 80px;
+      height: 330px;
     }
+
+    @include _m {
+      width: 100px;
+      height: 290px;
+    }
+  }
+  &__scroll-btns {
+    display: none;
+
+    @include _xl {
+      display: block;
+    }
+  }
+}
+
+.benefits__boxes::-webkit-scrollbar {
+  display: none;
 }

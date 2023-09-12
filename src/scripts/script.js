@@ -1,3 +1,4 @@
+//navigation
 const langUa = document.getElementById('lang-ua')
 const langEn= document.getElementById('lang-en')
 const menuBtn = document.getElementById('menu-btn');
@@ -38,3 +39,38 @@ menuItem.forEach (function(menuItem) {
 })
 
 
+//scroll section
+
+const btnScrollRight = document.getElementById('btn-scroll-right');
+const btnScrollLeft = document.getElementById('btn-scroll-left');
+const conent =  document.getElementById('scroll-container');
+   
+btnScrollRight.addEventListener("click", function(event) {
+   conent.scrollLeft += 300;
+    event.preventDefault();
+    checkScrollAvailability(); 
+  });
+
+  btnScrollLeft.addEventListener("click", function(event) {
+   conent.scrollLeft -= 300;
+    event.preventDefault();
+    checkScrollAvailability(); 
+  }); 
+
+ 
+function checkScrollAvailability() {
+    const isScrollLeftPossible = conent.scrollLeft > 0;
+    const isScrollRightPossible = conent.scrollLeft + conent.clientWidth < conent.scrollWidth;
+
+   if (isScrollLeftPossible) {
+       btnScrollLeft.classList.remove("btn-scroll-no-active");
+    } else {
+        btnScrollLeft.classList.add("btn-scroll-no-active");
+    }
+
+    if (isScrollRightPossible) {
+        btnScrollRight.classList.remove("btn-scroll-no-active");
+    } else {
+        btnScrollRight.classList.add("btn-scroll-no-active");
+    }
+}
