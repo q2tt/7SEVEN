@@ -1,0 +1,37 @@
+.sect-w-file{
+    background-color: $deep-black;
+    color: $white;
+    padding: 180px 0;
+
+    &__wrap{
+        @include flex-row;
+        align-items: center;
+    }
+    &__content{
+        margin: 0 130px 0 0;
+        max-width: 542px;
+    }
+
+    &__title{
+        margin: 0 0 30px 0;
+    }
+    &__p{
+        margin: 30px 0 0 0;
+        line-height: 26px;
+    }
+    &__link-downl{
+        line-height: 80px;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        color: $white;
+        text-decoration: none;
+    }
+    &__icon{
+        width: 80px;
+        height: 80px;
+        margin: 0 30px 0 0;
+        border-radius: 50%;
+    }
+
+}
