@@ -46,6 +46,11 @@
     font-style: normal;
     font-weight: 700;
     line-height: 26px;
+
+    @include _m{
+        font-size: 18px;
+        line-height: 22px;
+    }
 }
 .p14{
     font-family: 'CenturyGothic', sans-serif;
