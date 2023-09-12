@@ -1737,6 +1737,18 @@ textarea {
   padding: 180px 0;
 }
 
+@media (max-width: 991px) {
+  .sect-w-file {
+    padding: 100px 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .sect-w-file {
+    padding: 50px 0;
+  }
+}
+
 .sect-w-file__wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1750,9 +1762,58 @@ textarea {
           align-items: center;
 }
 
+@media (max-width: 1199px) {
+  .sect-w-file__wrap {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media (max-width: 991px) {
+  .sect-w-file__wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
 .sect-w-file__content {
   margin: 0 130px 0 0;
   max-width: 542px;
+}
+
+@media (max-width: 1199px) {
+  .sect-w-file__content {
+    margin: 0 60px 0 0;
+    max-width: 502px;
+  }
+}
+
+@media (max-width: 991px) {
+  .sect-w-file__content {
+    margin: 0;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 991px) {
+  .sect-w-file__button-box {
+    margin: 60px 0 0 0;
+  }
+}
+
+@media (max-width: 479px) {
+  .sect-w-file__button-box {
+    margin: 30px 0 0 0;
+  }
 }
 
 .sect-w-file__title {
@@ -1764,6 +1825,13 @@ textarea {
   line-height: 26px;
 }
 
+@media (max-width: 767px) {
+  .sect-w-file__p {
+    line-height: 20px;
+    margin: 14px 0 0 0;
+  }
+}
+
 .sect-w-file__link-downl {
   line-height: 80px;
   font-size: 18px;
@@ -1773,11 +1841,39 @@ textarea {
   text-decoration: none;
 }
 
+@media (max-width: 991px) {
+  .sect-w-file__link-downl {
+    margin: 40px 0 0 0;
+    line-height: 60px;
+  }
+}
+
+@media (max-width: 479px) {
+  .sect-w-file__link-downl {
+    line-height: 40px;
+  }
+}
+
 .sect-w-file__icon {
   width: 80px;
   height: 80px;
   margin: 0 30px 0 0;
   border-radius: 50%;
+}
+
+@media (max-width: 991px) {
+  .sect-w-file__icon {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 479px) {
+  .sect-w-file__icon {
+    width: 40px;
+    height: 40px;
+    margin: 0 15px 0 0;
+  }
 }
 
 body {

@@ -1,37 +1,92 @@
-.sect-w-file{
-    background-color: $deep-black;
+.sect-w-file {
+  background-color: $deep-black;
+  color: $white;
+  padding: 180px 0;
+
+  @include _l {
+    padding: 100px 0;
+  }
+
+  @include _m {
+    padding: 50px 0;
+  }
+
+  &__wrap {
+    @include flex-row;
+    align-items: center;
+
+    @include _xl {
+      justify-content: space-between;
+    }
+    @include _l {
+      @include flex-column;
+      align-items: flex-start;
+    }
+  }
+  &__content {
+    margin: 0 130px 0 0;
+    max-width: 542px;
+
+    @include _xl {
+      margin: 0 60px 0 0;
+      max-width: 502px;
+    }
+    @include _l {
+      margin: 0;
+      max-width: 100%;
+    }
+  }
+  &__button-box {
+    @include _l {
+      margin: 60px 0 0 0;
+    }
+    @include _s {
+      margin: 30px 0 0 0;
+    }
+  }
+
+  &__title {
+    margin: 0 0 30px 0;
+  }
+  &__p {
+    margin: 30px 0 0 0;
+    line-height: 26px;
+
+    @include _m {
+      line-height: 20px;
+      margin: 14px 0 0 0;
+    }
+  }
+  &__link-downl {
+    line-height: 80px;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
     color: $white;
-    padding: 180px 0;
+    text-decoration: none;
 
-    &__wrap{
-        @include flex-row;
-        align-items: center;
+    @include _l {
+      margin: 40px 0 0 0;
+      line-height: 60px;
     }
-    &__content{
-        margin: 0 130px 0 0;
-        max-width: 542px;
+    @include _s {
+      line-height: 40px;
     }
+  }
+  &__icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 30px 0 0;
+    border-radius: 50%;
 
-    &__title{
-        margin: 0 0 30px 0;
+    @include _l {
+      width: 60px;
+      height: 60px;
     }
-    &__p{
-        margin: 30px 0 0 0;
-        line-height: 26px;
+    @include _s {
+      width: 40px;
+      height: 40px;
+      margin: 0 15px 0 0;
     }
-    &__link-downl{
-        line-height: 80px;
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 700;
-        color: $white;
-        text-decoration: none;
-    }
-    &__icon{
-        width: 80px;
-        height: 80px;
-        margin: 0 30px 0 0;
-        border-radius: 50%;
-    }
-
+  }
 }
