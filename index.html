@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="dist/css/main.min.css">
+    <link rel="stylesheet" href="./node_modules/@splidejs/splide/dist/css/splide.min.css">
     <title>7seven</title>
 </head>
 <body>
@@ -316,9 +317,31 @@
                 </div>
             </div>
         </div>
+    </section>
+    <section class="reviews"> 
+        <div class="container">
+            <div class="reviews__wrap">
+                <div class="reviews__title-box">
+                    <h2 class="reviews__title h2">Ми сподіваємось твій відгук скоро також буде тут</h2>
+                </div>
+                <div class="reviews__content-box">
+
+                    <div class="splide" aria-label="Splide Basic HTML Example">
+                        <div class="splide__track">
+                              <ul class="splide__list">
+                                  <li class="splide__slide">Slide 01</li>
+                                  <li class="splide__slide">Slide 02</li>
+                                  <li class="splide__slide">Slide 03</li>
+                              </ul>
+                        </div>
+                      </div>
+
+                </div>
+            </div>
+        </div>
+
 
     </section>
-    <section></section>
 
 </main>
 <footer>
@@ -326,7 +349,7 @@
 </footer>
 
 
-
+    <script src="./node_modules/@splidejs/splide/dist/js/splide.min.js"></script>
     <script src="dist/js/main.min.js"></script>
 </body>
 </html>

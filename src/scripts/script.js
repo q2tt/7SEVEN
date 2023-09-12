@@ -74,3 +74,12 @@ function checkScrollAvailability() {
         btnScrollRight.classList.add("btn-scroll-no-active");
     }
 }
+
+//slider 
+
+var splide = new Splide( '.splide', {
+    type  : 'fade',
+    rewind: true,
+  } );
+  
+  splide.mount();
