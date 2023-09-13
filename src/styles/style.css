@@ -728,6 +728,13 @@ textarea {
   }
 }
 
+.p18-bold {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
 .box-desc-icon {
   max-width: 314px;
   min-height: 110px;
@@ -1874,6 +1881,102 @@ textarea {
     height: 40px;
     margin: 0 15px 0 0;
   }
+}
+
+.reviews {
+  padding: 46px 0 140px 0;
+}
+
+.reviews__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 0 0 90px;
+}
+
+.reviews__title-box {
+  max-width: 360px;
+}
+
+.reviews__content-box {
+  width: 655px;
+}
+
+.reviews__slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 550px;
+  min-height: 362px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+}
+
+.reviews__slide-p {
+  line-height: 30px;
+  color: #333333;
+  margin: 0 0 30px 0;
+  font-weight: 100;
+}
+
+.reviews__slide-name {
+  color: #212121;
+}
+
+.reviews__slide-img-box {
+  margin: 0 75px 120px 0;
+}
+
+.reviews__slide-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+
+.splide__arrow {
+  background: none !important;
+}
+
+.splide__arrow--prev svg {
+  -webkit-transform: none !important;
+          transform: none !important;
+}
+
+button.splide__arrow--prev {
+  left: -60px;
+}
+
+ul.splide__pagination {
+  bottom: -60px;
+}
+
+button.splide__pagination__page.is-active {
+  background-color: #141518;
+  -webkit-transform: none;
+          transform: none;
+}
+
+button.splide__pagination__pagee {
+  background-color: #8E8E9E;
+}
+
+ul.splide__pagination li {
+  margin-right: 11px;
 }
 
 body {
