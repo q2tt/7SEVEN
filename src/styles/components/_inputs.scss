@@ -1,0 +1,28 @@
+.input {
+  background: none;
+  border: none;
+  border-bottom: 1px solid #ccccdb;
+  color: $gray;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 100;
+  line-height: 22px;
+  width: 100%;
+  padding: 10px;
+  margin: 0 0 40px 0;
+}
+.input-text {
+  min-height: 80px;
+}
+input::-webkit-input-placeholder {
+  font-weight: 100;
+}
+input::-moz-placeholder {
+  font-weight: 100;
+}
+input:-ms-input-placeholder {
+  font-weight: 100;
+}
+input:-moz-placeholder {
+  font-weight: 100;
+}
