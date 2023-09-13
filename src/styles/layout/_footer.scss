@@ -1,113 +1,177 @@
 .footer {
-    background-color: $deep-black;
-    padding: 67px 0 0 0;
+  background-color: $deep-black;
+  padding: 67px 0 0 0;
 
+  @include _s {
+    padding: 27px 0 0 0;
+  }
+
+  color: $white;
+
+  &__wrap {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-template-rows: 1fr;
+    grid-template-areas: "logo company clients contact media";
+
+    @include _l {
+      grid-template-columns: auto auto auto 200px;
+      grid-template-rows: auto auto;
+      grid-template-areas: "logo company clients contact" "logo company clients  media";
+    }
+    @include _m {
+      grid-template-columns: auto auto auto;
+      grid-template-rows: auto auto auto;
+      grid-template-areas: "logo logo logo" "company clients contact" "company clients  media";
+    }
+    @include _s {
+      grid-template-columns: auto auto;
+      grid-template-rows: auto auto auto auto;
+      grid-template-areas: "logo logo" "company clients" "contact contact" "media media";
+    }
+  }
+
+  &__column-logo {
+    grid-area: logo;
+    width: 138px;
+    margin: 0 57px 0 0;
+
+    @include _l {
+      width: 120px;
+    }
+    @include _m {
+      width: 120px;
+      margin: 0 0 40px 0;
+    }
+    @include _s {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__column-company {
+    grid-area: company;
+    width: 159px;
+    margin: 0 36px 30px 0;
+    @include _xl {
+      width: 140px;
+      margin: 0 16px 30px 0;
+    }
+    @include _m {
+      width: 110px;
+    }
+  }
+
+  &__column-clients {
+    grid-area: clients;
+    width: 159px;
+    margin: 0 36px 0 0;
+    @include _xl {
+      width: 140px;
+      margin: 0 16px 0 0;
+    }
+    @include _m {
+      width: 110px;
+    }
+  }
+
+  &__column-contact {
+    grid-area: contact;
+    width: 200px;
+    margin: 0 100px 0 0;
+
+    @include _xl {
+      margin: 0 20px 0 0;
+    }
+  }
+
+  &__column-c-media {
+    grid-area: media;
+    @include _s {
+      margin: 20px 0 20px 0;
+    }
+  }
+
+  &__nav-title {
     color: $white;
-
-    &__wrap {
-        display: grid;
-        grid-template-columns: auto auto auto auto auto;
-        grid-template-rows: 1fr;
-        grid-template-areas: "logo company clients contact media";
+    margin: 0 0 20px 0;
+    @include _s {
+      margin: 0 0 10px 0;
     }
+  }
 
-    &__column-logo {
-        grid-area: logo;
-        width: 138px;
-        margin: 0 57px 0 0;
+  &__nav-link {
+    color: $gray-txt;
+    text-decoration: none;
+    font-weight: 100;
+    font-size: 14px;
+    line-height: 38px;
+
+    @include _s {
+      line-height: 24px;
     }
+  }
 
-    &__column-company {
-        grid-area: company;
-        width: 159px;
-        margin: 0 36px 30px 0;
+  &__nav-link:hover {
+    color: $white;
+    text-decoration: underline;
+  }
+
+  &__contact {
+    color: $white;
+    font-weight: 700;
+    line-height: 38px;
+    text-decoration: none;
+
+    @include _l {
+      font-weight: 400;
+      color: $gray;
     }
-
-    &__column-clients {
-        grid-area: clients;
-        width: 159px;
-        margin: 0 36px 0 0;
+    @include _s {
+      line-height: 24px;
     }
+  }
 
-    &__column-contact {
-        grid-area: contact;
-        width: 200px;
-        margin: 0 100px 0 0;
-    }
+  &__c-media-link {
+    margin: 0 20px 0 0;
+    text-decoration: none;
+  }
 
-    &__column-c-media {
-        grid-area: media;
-    }
+  &__c-media-img {
+    width: 24px;
+    height: 24px;
+  }
 
+  &__c-media-img:hover {
+    filter: invert(62%) sepia(65%) saturate(3453%) hue-rotate(81deg)
+      brightness(111%) contrast(132%);
+  }
 
-    &__nav-title {
-        color: $white;
-        margin: 0 0 20px 0;
-    }
+  &__wrap-bottom {
+    border-top: 1px solid $gray-txt;
+    color: $gray-txt;
+  }
 
-    &__nav-links {}
+  &__bottom {
+    @include flex-row-btw;
+    padding: 15px 0;
+  }
 
-    &__nav-link-li {}
+  &__bottom-p {
+    display: block;
+    line-height: 24px;
+  }
 
-    &__nav-link {
-        color: $gray-txt;
-        text-decoration: none;
-        font-weight: 100;
-        font-size: 14px;
-        line-height: 38px;
-    }
+  &__bottom-link {
+    display: block;
+  }
 
-    &__nav-link:hover {
-        color: $white;
-        text-decoration: underline;
-    }
+  &__bottom-link svg {
+    width: 24px;
+    height: 24px;
+  }
 
-    &__contact {
-        color: $white;
-        font-weight: 700;
-        line-height: 38px;
-        text-decoration: none;
-    }
-
-    &__c-media-link {
-        margin: 0 20px 0 0;
-        text-decoration: none;
-    }
-
-    &__c-media-img {
-        width: 24px;
-        height: 24px;
-    }
-
-    &__c-media-img:hover {
-        filter: invert(62%) sepia(65%) saturate(3453%) hue-rotate(81deg) brightness(111%) contrast(132%);
-    }
-
-    &__wrap-bottom {
-        border-top: 1px solid $gray-txt;
-        color: $gray-txt;
-    }
-
-    &__bottom {
-        @include flex-row-btw;
-        padding: 15px 0;
-    }
-
-    &__bottom-p {
-        display: block;
-        line-height: 24px;
-    }
-
-    &__bottom-link {
-        display: block;
-    }
-
-    &__bottom-link svg {
-        width: 24px;
-        height: 24px;
-    }
-
-    &__bottom-link svg:hover {
-        filter: invert(62%) sepia(65%) saturate(3453%) hue-rotate(81deg) brightness(111%) contrast(132%);
-    }
+  &__bottom-link svg:hover {
+    filter: invert(62%) sepia(65%) saturate(3453%) hue-rotate(81deg)
+      brightness(111%) contrast(132%);
+  }
 }

@@ -3,6 +3,7 @@
   position: fixed;
   background-color: $nav-bg;
   z-index: 20;
+  border-bottom: 1px solid #ffffff6b;
 
 
   &__container {
@@ -250,4 +251,8 @@
   color: $white;
   color: $deep-black;
   text-decoration: underline;
+}
+.scrolled{
+    background-color: $gray-txt
+    
 }
