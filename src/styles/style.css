@@ -642,10 +642,30 @@ textarea {
   width: 100%;
   padding: 10px;
   margin: 0 0 40px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media (max-width: 767px) {
+  .input {
+    margin: 0 0 24px 0;
+  }
+}
+
+@media (max-width: 479px) {
+  .input {
+    padding: 5px 10px;
+  }
 }
 
 .input-text {
   min-height: 80px;
+}
+
+@media (max-width: 479px) {
+  .input-text {
+    min-height: 40px;
+  }
 }
 
 input::-webkit-input-placeholder {
@@ -1941,7 +1961,7 @@ input:-moz-placeholder {
 
 @media (max-width: 767px) {
   .reviews {
-    padding: 40px 0;
+    padding: 40px 0 60px 0;
   }
 }
 
@@ -2203,13 +2223,44 @@ ul.splide__pagination li {
           flex-direction: row;
 }
 
+@media (max-width: 767px) {
+  .contact-form__wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .contact-form__contacts-box {
   max-width: 352px;
   margin: 0 135px 0 0;
 }
 
+@media (max-width: 1199px) {
+  .contact-form__contacts-box {
+    margin: 0 45px 0 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .contact-form__contacts-box {
+    margin: 0;
+  }
+}
+
 .contact-form__form-box {
   max-width: 553px;
+}
+
+@media (max-width: 767px) {
+  .contact-form__form-box {
+    max-width: none;
+    margin: 40px 0 0 0;
+  }
 }
 
 .contact-form__desc {
@@ -2218,8 +2269,20 @@ ul.splide__pagination li {
   margin: 30px 0 0 0;
 }
 
+@media (max-width: 767px) {
+  .contact-form__desc {
+    margin: 20px 0 0 0;
+  }
+}
+
 .contact-form__contact-name {
   margin: 30px 0 10px 0;
+}
+
+@media (max-width: 767px) {
+  .contact-form__contact-name {
+    margin: 20px 0 10px 0;
+  }
 }
 
 .contact-form__contact-link, .contact-form__shedule {
@@ -2233,6 +2296,18 @@ ul.splide__pagination li {
 
 .contact-form__btn-submit {
   margin: 20px 0 0 0;
+}
+
+@media (max-width: 767px) {
+  .contact-form__btn-submit {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 479px) {
+  .contact-form__btn-submit {
+    width: 100%;
+  }
 }
 
 body {
