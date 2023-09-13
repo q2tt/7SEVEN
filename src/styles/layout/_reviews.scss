@@ -1,77 +1,163 @@
 .reviews {
-    padding: 46px 0 140px 0;
+  padding: 46px 0 140px 0;
 
-    &__wrap {
-        @include flex-row-reverse;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0 0 0 90px;
+  @include _xl {
+    padding: 120px 0;
+  }
+  @include _l {
+    padding: 80px 0;
+  }
+
+  @include _m {
+    padding: 40px 0;
+  }
+
+  &__wrap {
+    @include flex-row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0 0 90px;
+
+    @include _xl {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: normal;
+      padding: 0;
     }
+  }
 
-    &__title-box {
-        max-width: 360px;
+  &__title-box {
+    max-width: 360px;
+
+    @include _xl {
+      max-width: 70%;
     }
-
-    &__content-box {
-        width: 655px;
+    @include _s {
+      max-width: 100%;
     }
+  }
 
-    &__slide {
-        @include flex-row;
-        width: 550px;
-        min-height: 362px;
-        align-items: end;
+  &__content-box {
+    width: 655px;
+    @include _xl {
+      margin: 0 auto;
     }
-
-    &__slide-p {
-        line-height: 30px;
-        color: $black;
-        margin: 0 0 30px 0;
-        font-weight: 100;
+    @include _l {
+      width: 100%;
     }
+  }
 
-    &__slide-name {
-        color: $black-name;
+  &__slide {
+    @include flex-row;
+    width: 550px;
+    min-height: 362px;
+    align-items: end;
+
+    @include _xxl {
+      width: 500px;
     }
-
-    &__slide-img-box {
-        margin: 0 75px 120px 0;
+    @include _xl {
+      width: 100%;
+      min-height: auto;
+      align-items: flex-start;
+      margin: 60px 0 0 0;
     }
-
-    &__slide-img {
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
-
+    @include _l {
+      padding: 0 60px;
+      box-sizing: border-box;
     }
+    @include _s {
+      padding: 0 15px;
+    }
+  }
 
+  &__slide-p {
+    line-height: 30px;
+    color: $black;
+    margin: 0 0 30px 0;
+    font-weight: 100;
+
+    @include _m {
+      line-height: 22px;
+    }
+  }
+
+  &__slide-name {
+    color: $black-name;
+  }
+
+  &__slide-img-box {
+    margin: 0 75px 120px 0;
+
+    @include _xxl {
+      margin: 0 35px 120px 0;
+    }
+    @include _s {
+      margin: 0px 15px 0px 0;
+    }
+  }
+
+  &__slide-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    @include _m {
+      width: 60px;
+      height: 60px;
+      margin-top: calc(50% - 30px);
+    }
+  }
 }
 
 .splide__arrow {
-    background: none !important;
+  background: none !important;
 }
 
 .splide__arrow--prev svg {
-    transform: none !important;
+  transform: none !important;
 }
 
 button.splide__arrow--prev {
-    left: -60px;
+  left: -60px;
+  @include _l {
+    left: 10px;
+  }
+  @include _s {
+    left: -15px;
+  }
+}
+button.splide__arrow--next {
+  @include _xxl {
+    right: 60px;
+  }
+  @include _xl {
+    right: -60px;
+  }
+  @include _l {
+    right: 10px;
+  }
+  @include _s {
+    right: -15px;
+  }
 }
 
 ul.splide__pagination {
-    bottom: -60px;
+  bottom: -60px;
+
+  @include _xl {
+    bottom: -30px;
+  }
 }
 
 button.splide__pagination__page.is-active {
-    background-color: $deep-black;
-    transform: none;
+  background-color: $deep-black;
+  transform: none;
 }
 
 button.splide__pagination__pagee {
-    background-color: $gray;
+  background-color: $gray;
 }
 
 ul.splide__pagination li {
-    margin-right: 11px;
+  margin-right: 11px;
 }
